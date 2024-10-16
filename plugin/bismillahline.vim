@@ -11,4 +11,3 @@ let g:loaded_bismillahline = 1
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
-
