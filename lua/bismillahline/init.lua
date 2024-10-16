@@ -94,7 +94,7 @@ function M.setup()
         hi BismillahLineNormal guibg=#282828 guifg=#ebdbb2
         hi BismillahLineNC guibg=#3c3836 guifg=#a89984
         hi BismillahLineGit guibg=#fb4934 guifg=#282828
-        hi BismillahLineFile guibg=#b8bb26 guifg=#ebdbb2
+        hi BismillahLineFile guibg=#b8bb26 guifg=#282828
         hi BismillahLineDiag guibg=#fe8019 guifg=#282828
         hi BismillahLineInfo guibg=#83a598 guifg=#ebdbb2
     ]])
