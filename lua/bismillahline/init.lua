@@ -91,12 +91,12 @@ end
 function M.setup()
     -- Set up highlight groups
     vim.cmd([[
-        hi BismillahLineNormal guibg=#4B7287 guifg=#FFFFFF
-        hi BismillahLineNC guibg=#2B3A42 guifg=#A9B665
-        hi BismillahLineGit guibg=#FFA07A guifg=#000000
-        hi BismillahLineFile guibg=#3E8E41 guifg=#FFFFFF
-        hi BismillahLineDiag guibg=#FFD700 guifg=#000000
-        hi BismillahLineInfo guibg=#FF6347 guifg=#FFFFFF
+        hi BismillahLineNormal guibg=#282828 guifg=#ebdbb2
+        hi BismillahLineNC guibg=#3c3836 guifg=#a89984
+        hi BismillahLineGit guibg=#fb4934 guifg=#282828
+        hi BismillahLineFile guibg=#b8bb26 guifg=#ebdbb2
+        hi BismillahLineDiag guibg=#fe8019 guifg=#282828
+        hi BismillahLineInfo guibg=#83a598 guifg=#ebdbb2
     ]])
 
     -- Set statusline
