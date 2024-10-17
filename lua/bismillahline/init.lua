@@ -134,7 +134,7 @@ function M.statusline()
 		os_info,
 		plugin_count,
 		nvim_version,
-		" 󱎕",
+		" ",
 		"%#BismillahLineTime#",
 		datetime,
 	})
