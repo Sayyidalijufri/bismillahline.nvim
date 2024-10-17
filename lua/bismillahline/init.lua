@@ -71,7 +71,7 @@ local function get_os_info()
 		Windows = "⊞",
 		macOS = "",
 	}
-	return string.format("%s %s", os_icon[os] or "🤔", os)
+	return string.format("%s %s", os_icon[os] or "🤔", os(" "))
 end
 
 local function get_plugin_count()
@@ -81,7 +81,7 @@ end
 
 local function get_nvim_version()
 	local version = vim.version()
-	return string.format(" Neovim v%d.%d.%d", version.major, version.minor, version.patch)
+	return string.format("  Neovim v%d.%d.%d", version.major, version.minor, version.patch)
 end
 
 local function get_datetime()
@@ -114,10 +114,11 @@ function M.statusline()
 	local datetime = get_datetime()
 
 	-- Add slanted text after mode
-	local slanted_text = ""
+	local slanted_text = " "
+	local rounded_text = ""
 	return table.concat({
 		"%#BismillahLineNormal#",
-		mode .. " " .. slanted_text .. " ",
+		slanted_text .. mode .. " " .. rounded_text .. "  ",
 		"%#BismillahLineGit#",
 		git_info ~= "" and (git_info .. " ") or "",
 		"%#BismillahLineFile#",
