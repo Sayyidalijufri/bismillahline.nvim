@@ -118,7 +118,8 @@ function M.statusline()
 	local rounded_text = ""
 	return table.concat({
 		"%#BismillahLineNormal#",
-		slanted_text .. mode .. " " .. rounded_text .. "  ",
+		slanted_text .. mode .. " ",
+		"%#BismillahLineNormal#" .. "%*%#" .. rounded_text .. "%*%#BismillahLineNormal#" .. "  ",
 		"%#BismillahLineGit#",
 		git_info ~= "" and (git_info .. " ") or "",
 		"%#BismillahLineFile#",
