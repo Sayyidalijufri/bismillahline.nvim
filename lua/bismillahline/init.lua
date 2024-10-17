@@ -136,7 +136,7 @@ function M.statusline()
 		nvim_version,
 		" ",
 		"%#BismillahLineTime#",
-		datetime .. " ",
+		" " .. datetime .. " ",
 	})
 end
 
