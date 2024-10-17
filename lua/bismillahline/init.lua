@@ -67,16 +67,16 @@ end
 local function get_os_info()
 	local os = utils.get_os()
 	local os_icon = {
-		Linux = "🐧",
-		Windows = "⊞",
-		macOS = "",
+		Linux = "",
+		Windows = "",
+		macOS = "",
 	}
 	return string.format("%s %s", os_icon[os] or "🤔", os .. " ")
 end
 
 local function get_plugin_count()
 	local stats = require("lazy").stats()
-	return string.format("🧩 %d plugins", stats.count)
+	return string.format("󰐱 %d plugins", stats.count)
 end
 
 local function get_nvim_version()
@@ -85,7 +85,7 @@ local function get_nvim_version()
 end
 
 local function get_datetime()
-	return os.date("🕰️ %a %d %b  🕒 %H:%M")
+	return os.date("📅 %a %d %b  🕒 %H:%M")
 end
 
 function M.setup()
@@ -98,7 +98,8 @@ function M.setup()
         hi BismillahLineFile guibg=#282828 guifg=#b8bb26 
         hi BismillahLineDiag guibg=#282828 guifg=#fe8019
         hi BismillahLineInfo guibg=#282828 guifg=#ebdbb2
-    ]])
+        hi BismillahLineTime guibg=#ebdbb2 guifg=#282828
+        ]])
 
 	-- Set statusline
 	vim.o.statusline = [[%!luaeval("require'bismillahline'.statusline()")]]
@@ -133,6 +134,8 @@ function M.statusline()
 		os_info,
 		plugin_count,
 		nvim_version,
+		" 󱎕",
+		"%#BismillahLineTime#",
 		datetime,
 	})
 end
