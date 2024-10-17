@@ -92,6 +92,7 @@ function M.setup()
 	-- Set up highlight groups
 	vim.cmd([[
         hi BismillahLineNormal guibg=#83a598 guifg=#282828
+	hi BismillahLineRound guibg=#282828 guifg=#83a598
         hi BismillahLineNC guibg=#3c3836 guifg=#a89984
         hi BismillahLineGit guibg=#282828 guifg=#fb4934 
         hi BismillahLineFile guibg=#282828 guifg=#b8bb26 
@@ -119,7 +120,8 @@ function M.statusline()
 	return table.concat({
 		"%#BismillahLineNormal#",
 		slanted_text .. mode .. " ",
-		"%#BismillahLineNormal#" .. "%*%#" .. rounded_text .. "%*%#BismillahLineNormal#" .. "  ",
+		"%#BismillahLineRound#",
+		rounded_text .. " ",
 		"%#BismillahLineGit#",
 		git_info ~= "" and (git_info .. " ") or "",
 		"%#BismillahLineFile#",
