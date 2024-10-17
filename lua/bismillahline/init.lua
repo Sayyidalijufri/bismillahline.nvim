@@ -71,7 +71,7 @@ local function get_os_info()
 		Windows = "⊞",
 		macOS = "",
 	}
-	return string.format("%s %s", os_icon[os] or "🤔", os(" ") .. " ")
+	return string.format("%s %s", os_icon[os] or "🤔", os .. " ")
 end
 
 local function get_plugin_count()
