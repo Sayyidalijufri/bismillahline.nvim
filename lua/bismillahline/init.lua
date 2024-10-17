@@ -120,7 +120,7 @@ function M.statusline()
 	local rounded_text = ""
 	return table.concat({
 		"%#BismillahLineNormal#",
-		slanted_text .. mode .. " ",
+		" " .. mode .. " ",
 		"%#BismillahLineRound#",
 		rounded_text .. " ",
 		"%#BismillahLineGit#",
@@ -136,7 +136,7 @@ function M.statusline()
 		nvim_version,
 		" ",
 		"%#BismillahLineTime#",
-		datetime,
+		datetime .. " ",
 	})
 end
 
