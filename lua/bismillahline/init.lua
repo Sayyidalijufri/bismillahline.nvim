@@ -102,7 +102,7 @@ function M.setup()
         ]])
 
 	-- Set statusline
-	vim.o.statusline = [[%!luaeval("require'bismillahline'.statusline()")]]
+	vim.o.statusline = [[%!luaeval("require('bismillahline').statusline()")]]
 end
 
 function M.statusline()
