@@ -13,10 +13,6 @@ A beautiful and functional statusline for Neovim with Git integration, LSP diagn
 - 🕒 Date and time display
 - 📜 Random inspirational quotes on startup
 
-## 📸 Screenshots
-
-[Add your screenshots here]
-
 ## ⚡️ Requirements
 
 - Neovim >= 0.8.0
